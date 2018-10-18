@@ -1,0 +1,51 @@
+ext {
+    // Android
+    androidBuildToolsVersion = "26.0.0"
+    androidMinSdkVersion = 21
+    androidTargetSdkVersion = 26
+    androidCompileSdkVersion = 26
+    kotlinVersion = "1.1.4-3"
+
+    // Libraries
+    supportLibraryVersion = "26.0.1"
+    rxJavaVersion = "2.0.2"
+    javaxAnnotationVersion = "1.0"
+    javaxInjectVersion = "1"
+    rxKotlinVersion = "2.1.0"
+    androidAnnotationVersion = "21.0.3"
+    daggerVersion = "2.11"
+
+    // Testing
+    jUnitVersion = "4.12"
+    assertJVersion = "3.8.0"
+    mockitoKotlinVersion = "1.5.0"
+    roboeletricVersion = "3.4.2"
+    mockitoVersion = "1.5.0"
+
+    domainDependencies = [
+            javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject: "javax.inject:javax.inject:${javaxInjectVersion}",
+            rxJava: "io.reactivex.rxjava2:rxkotlin:${rxJavaVersion}"
+    ]
+
+    domainTestDependencies = [
+            junit: "junit:junit:${jUnitVersion}",
+            mockito: "com.nhaarman:mockito-kotlin:${mockitoVersion}",
+            assertj: "org.assertj:assertj-core:${assertJVersion}"
+    ]
+
+    dataDependencies = [
+            javaxAnnotation: "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject: "javax.inject:javax.inject:${javaxInjectVersion}",
+            rxKotlin: "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}"
+    ]
+
+    dataTestDependencies = [
+            junit: "junit:junit:${jUnitVersion}",
+            kotlinJUnit: "org.jetbrains.kotlin:kotlin-test-junit:${kotlinVersion}",
+            mockito: "com.nhaarman:mockito-kotlin:${mockitoVersion}",
+            assertj: "org.assertj:assertj-core:${assertJVersion}",
+            roboeltric: "org.roboeletric:roboeletric:${roboeletricVersion}"
+    ]
+}
