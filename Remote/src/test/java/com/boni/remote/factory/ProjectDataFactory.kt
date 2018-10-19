@@ -27,5 +27,4 @@ object ProjectDataFactory {
     fun makeProjectsResponse(): ProjectsResponseModel {
         return ProjectsResponseModel(listOf(makeProject(), makeProject()))
     }
-
 }
