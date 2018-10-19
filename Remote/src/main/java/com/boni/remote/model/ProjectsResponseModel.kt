@@ -1,4 +1,3 @@
 package com.boni.remote.model
 
-class ProjectsResponseModel {
-}
+class ProjectsResponseModel(val items: List<ProjectsResponseModel>)
