@@ -12,12 +12,14 @@ ext {
     javaxAnnotationVersion = "1.0"
     javaxInjectVersion = "1"
     rxKotlinVersion = "2.1.0"
+    rxAndroidVersion = '2.0.1'
     androidAnnotationVersion = "21.0.3"
     daggerVersion = "2.11"
     gsonVersion = "2.8.1"
     okHttpVersion = "3.8.1"
     retrofitVersion = "2.3.0"
     roomVersion = '1.0.0'
+    archCompVersion = '1.1.1'
 
     // Testing
     jUnitVersion = "4.12"
@@ -107,4 +109,26 @@ ext {
             supportRules:       "com.android.support.test:rules:${androidSupportRulesVersion}"
     ]
 
+    presentationDependencies = [
+            daggerCompiler:     "com.google.dagger:dagger-compiler:${daggerVersion}",
+            dagger:             "com.google.dagger:dagger:${daggerVersion}",
+            rxKotlin:           "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            kotlin:             "org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}",
+            rxAndroid:          "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            javaxAnnotation:    "javax.annotation:jsr250-api:${javaxAnnotationVersion}",
+            javaxInject:        "javax.inject:javax.inject:${javaxInjectVersion}",
+            androidAnnotations: "com.android.support:support-annotations:${androidAnnotationVersion}",
+            archRuntime:        "android.arch.lifecycle:runtime:${archCompVersion}",
+            archExtensions:     "android.arch.lifecycle:extensions:${archCompVersion}",
+            archCompiler:       "android.arch.lifecycle:compiler:${archCompVersion}",
+    ]
+
+    presentationTestDependencies = [
+            junit:              "junit:junit:${jUnitVersion}",
+            kotlinJUnit:        "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",
+            assertj:            "org.assertj:assertj-core:${assertJVersion}",
+            mockito:            "com.nhaarman:mockito-kotlin:${mockitoKotlinVersion}",
+            robolectric:        "org.robolectric:robolectric:${roboeletricVersion}",
+            archTesting:        "android.arch.core:core-testing:${archCompVersion}",
+    ]
 }
