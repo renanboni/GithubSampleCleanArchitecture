@@ -6,7 +6,7 @@ import com.boni.clean.domain.repository.ProjectsRepository
 import io.reactivex.Completable
 import javax.inject.Inject
 
-class BookmarkProject @Inject constructor(private val projectsRepository: ProjectsRepository,
+open class BookmarkProject @Inject constructor(private val projectsRepository: ProjectsRepository,
                                           postExecutionThread: PostExecutionThread)
     : CompletableUseCase<BookmarkProject.Params>(postExecutionThread){
 
