@@ -19,5 +19,5 @@ data class CachedProject (
         var ownerAvatar: String,
 
         @ColumnInfo(name = ProjectsConstants.COLUMN_IS_BOOKMARKED)
-        val isBookmarked: Boolean
+        var isBookmarked: Boolean
 )
