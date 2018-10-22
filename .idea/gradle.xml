@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/Remote" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/cache" />
+            <option value="$PROJECT_DIR$/mobile-ui" />
             <option value="$PROJECT_DIR$/presentation" />
           </set>
         </option>
