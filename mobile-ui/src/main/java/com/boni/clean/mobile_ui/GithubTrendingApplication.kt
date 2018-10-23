@@ -7,16 +7,19 @@ import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import timber.log.Timber
+import javax.inject.Inject
 
 class GithubTrendingApplication : Application(), HasActivityInjector {
 
-    private lateinit var androidInjector: DispatchingAndroidInjector<Activity>
+    @Inject
+    lateinit var androidInjector: DispatchingAndroidInjector<Activity>
 
     override fun onCreate() {
         super.onCreate()
         setupTimbler()
 
-        DaggerApplicationComponent.builder()
+        DaggerApplicationComponent
+                .builder()
                 .application(this)
                 .build()
                 .inject(this)

@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.boni.clean.mobile_ui">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".GithubTrendingApplication"
         android:allowBackup="true"
@@ -16,7 +18,20 @@
             android:value="25.3.1"
             tools:replace="android:value" />
 
-        <activity android:name=".browse.BrowseActivity"></activity>
-    </application>
+        <activity
+            android:name=".browse.BrowseActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".bookmarked.BookmarkedActivity"
+            android:label="@string/title_bookmarked" />
+    </application>
 </manifest>

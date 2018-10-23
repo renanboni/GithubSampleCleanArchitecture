@@ -12,6 +12,7 @@ import dagger.Provides
 @Module
 abstract class RemoteModule {
 
+    @Module
     companion object {
 
         @Provides

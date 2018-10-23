@@ -6,7 +6,7 @@ android {
     def globalConfiguration = rootProject.extensions.getByName("ext")
 
     compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
-    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         minSdkVersion globalConfiguration["androidMinSdkVersion"]
@@ -25,7 +25,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    buildToolsVersion '27.0.3'
+
 }
 
 dependencies {
@@ -33,10 +33,10 @@ dependencies {
     def mobileUiTestDependencies = rootProject.ext.mobileUiTestDependencies
 
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    implementation project(':presentation')
-    implementation project(':Data')
-    implementation project(':Remote')
-    implementation project(':cache')
+    compile project(':presentation')
+    compile project(':Data')
+    compile project(':Remote')
+    compile project(':cache')
 
     implementation mobileUiDependencies.javaxAnnotation
 
@@ -55,9 +55,9 @@ dependencies {
     implementation mobileUiDependencies.dagger
     implementation mobileUiDependencies.daggerSupport
 
-    implementation presentationDependencies.archRuntime
-    implementation presentationDependencies.archExtensions
-    implementation "android.arch.persistence.room:rxjava2:1.0.0"
+    compile presentationDependencies.archRuntime
+    compile presentationDependencies.archExtensions
+    compile "android.arch.persistence.room:rxjava2:1.0.0"
     kapt presentationDependencies.archCompiler
 
     testImplementation mobileUiTestDependencies.kotlinJUnit
